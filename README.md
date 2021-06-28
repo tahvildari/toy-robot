@@ -87,18 +87,18 @@ Apache Maven 3.8.1
 ```
 
 ### Build the project
-Please make sure you have java JDK V1.8 or above and maven 3.x.0 installed on your PC.
+Please make sure you have java JDK V1.8 or above and maven 3.x.0 and git installed on your PC.
 
 First, clone the project files from git repository in a directory like 'c:\toy-robot'.
-
-Clone this repo:
-
-    ```git clone git@github.com:tahvildari/toy-robot.git```
 
 Open a command prompt by typing the 'cmd' command and go to the project directory by using the 'cd' command.
 ```
 cd c:\toy-robot
 ```
+
+Clone this repo:
+
+    ```git clone git@github.com:tahvildari/toy-robot.git```
  
 To build the project, you need to run the following command in the command prompt.
 
@@ -124,7 +124,7 @@ this message will appear at the end of the application startup process:
 
 ## Running the tests
 
-To run the test please run this command:
+To run the test please run this command inside the project directory:
 
 ``mvn test``
 
