@@ -160,7 +160,9 @@ Each Command encapsulated the validation rules and the functionality and it make
 There is a position service which is responsible for keeping the robot's position. In addition, it calculates the next movement of the robot based on the received command. 
 This service easily can be modified to keep track of more than one robot in the table which is out of the scope of the current task.
       
-Note: Instead of having the message ```Output: 3,3,NORTH``` in the output, I changed it to ```The Command 'MOVE' executed. Current position is {x=3, y=3, face=SOUTH}``` to make it more readable and user-friendly.                                                                         
+Note: To make the application more user-friendly and more informative, instead of having the message ```Output: 3,3,NORTH``` in the output, I changed it to ```The Command 'MOVE' executed. Current position is {x=3, y=3, face=SOUTH}```. After sending any command, the position will be 
+displayed on the console. It can be disabled by changing the log level in the future.
+
 
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. 

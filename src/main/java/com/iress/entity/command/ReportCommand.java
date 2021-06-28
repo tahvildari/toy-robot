@@ -16,7 +16,7 @@ public class ReportCommand extends AbstractCommand {
 
     @Override
     public Position execute() {
-        System.out.println("the " + commandType + " command is called. The next " + PositionService.getCurrentPosition());
+        System.out.println("The current position is: " + PositionService.getCurrentPosition());
         return PositionService.getCurrentPosition();
     }
 }

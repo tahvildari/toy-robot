@@ -6,26 +6,36 @@ import com.iress.entity.position.Direction;
 import com.iress.entity.position.Position;
 import com.iress.entity.table.Table;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class PositionService {
+    
 
     private PositionService() {
         throw new IllegalStateException("Utility class cannot be instantiated.");
     }
-
-    private static Position currentPosition = null;
+    
+    private static Map<String, Position> currentPositionMap = new HashMap<>();
+    private static String defaultRobotId = "Robot_1";
 
     public static Position getCurrentPosition() {
-        return currentPosition;
+        return getCurrentPosition(defaultRobotId);
+    }
+
+    public static Position getCurrentPosition(String robotID) {
+        return currentPositionMap.get(robotID);
     }
 
     public static void setCurrentPosition(Position currentPosition) {
-        PositionService.currentPosition = currentPosition;
+        PositionService.currentPositionMap.put(defaultRobotId, currentPosition);
     }
 
     public static void changeRobotDirection(CommandType commandType) {
+        Position currentPosition = getCurrentPosition();
         currentPosition.setFace(getNextFace(currentPosition.getFace(), commandType));
+        setCurrentPosition(currentPosition);
     }
 
     public static Direction getNextFace(Direction currentDirection, CommandType commandType) {

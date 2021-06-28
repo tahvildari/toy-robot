@@ -19,7 +19,6 @@ public class Application {
         BufferedReader consoleReader = new BufferedReader(
                 new InputStreamReader(System.in));
         while (!receivedCommand.equalsIgnoreCase("exit")) {
-            // Enter data using BufferReader
 
             if (PositionService.getCurrentPosition() == null) {
                 System.out.println("Please enter the position of the robot by using 'PLACE X,Y,F' command :");
