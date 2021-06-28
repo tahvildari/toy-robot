@@ -1,4 +1,4 @@
-# Toy Robot coding challange 
+# Toy Robot coding challenge 
 
 - The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 x 5 units.
 - There are no other obstructions on the table surface.
@@ -106,12 +106,12 @@ To build the project, you need to run the following command in the command promp
 mvn clean install
 ```
 The executable jar file will be created inside the target directory of the project. 
-For example c:\toy-robot\target\toy-robot-0.0.1-SNAPSHOT.jar 
+For example c:\toy-robot\target\toy-robot-1.0-SNAPSHOT.jar 
 
 To run the application, run the following command: 
 
 ```
-java -jar c:\toy-robot\target\toy-robot-0.0.1-SNAPSHOT.jar
+java -jar c:\toy-robot\target\toy-robot-1.0-SNAPSHOT.jar
 ```
 or you can enter into the target directory and run the jar file:
 ```
