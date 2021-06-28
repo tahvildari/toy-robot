@@ -124,6 +124,7 @@ To run the test please run this command:
 
 
 ## Built With
+* [Java 8](https://docs.oracle.com/javase/8/) - Java 1.8 JDK
 * [Junit](https://junit.org/junit4/) - Unit test framework
 * [Mokito](https://site.mockito.org/) - Mock test framework
 * [Maven](https://maven.apache.org/) - Dependency Management
