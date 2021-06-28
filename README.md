@@ -87,7 +87,13 @@ Apache Maven 3.8.1
 ```
 
 ### Build the project
-First, extract the compressed project files in a directory, For example, 'c:\toy-robot'.
+Please make sure you have java JDK V1.8 or above and maven 3.x.0 installed on your PC.
+
+First, clone the project files from git repository in a directory like 'c:\toy-robot'.
+
+Clone this repo:
+
+    ```git clone git@github.com:tahvildari/toy-robot.git```
 
 Open a command prompt by typing the 'cmd' command and go to the project directory by using the 'cd' command.
 ```
@@ -144,7 +150,7 @@ Each command has its validation and execution logic but if there is any shared a
 moved to the AbstractCommand class to reduce any boilerplate codes.
 
 Any cross-cutting functionality like logging, saving tracking of the robot movement,... can be added to the command processor and as a result
-will be applied to all of the received commands.
+will be applied to all the received commands.
 
 The table dimensions are kept in the ``Table`` entity class and can be initialised at start-up. Therefore, the application can
 work with different table sizes instead of having hard-coded dimensions.
@@ -155,8 +161,8 @@ There is a position service which is responsible for keeping the robot's positio
 This service easily can be modified to keep track of more than one robot in the table which is out of the scope of the current task.
       
 Note: Instead of having the message ```Output: 3,3,NORTH``` in the output, I changed it to ```The Command 'MOVE' executed. Current position is {x=3, y=3, face=SOUTH}``` to make it more readable and user-friendly.                                                                         
-## Versioning
 
+## Versioning
 We use [SemVer](http://semver.org/) for versioning. 
 
 ## Authors
