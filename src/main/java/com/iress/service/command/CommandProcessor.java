@@ -12,7 +12,7 @@ public class CommandProcessor {
         try {
             command.validate();
             command.execute();
-            System.out.println("DEBUG: The Command '" + ((AbstractCommand) command).getCommandType() + "' executed. Current position is " + PositionService.getCurrentPosition());
+            System.out.println("The Command '" + ((AbstractCommand) command).getCommandType() + "' executed. Current position is " + PositionService.getCurrentPosition());
         } catch (ValidationException ve) {
             System.out.println(ve.getMessage());
         }

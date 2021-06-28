@@ -130,7 +130,7 @@ To run the test please run this command:
 * [Maven](https://maven.apache.org/) - Dependency Management
 
 ## Design
-The application designed in the way that covers all the business requirements and is flexible for any further changes.
+The application designed in the way that covers all the business requirements and is flexible for any further changes while keeping the solution simple.
 The **Command** design pattern is chosen for creating the toy robot application. 
 
 The command pattern is a behavioural design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time.
@@ -153,7 +153,8 @@ Each Command encapsulated the validation rules and the functionality and it make
 
 There is a position service which is responsible for keeping the robot's position. In addition, it calculates the next movement of the robot based on the received command. 
 This service easily can be modified to keep track of more than one robot in the table which is out of the scope of the current task.
-                                                                               
+      
+Note: Instead of having the message ```Output: 3,3,NORTH``` in the output, I changed it to ```The Command 'MOVE' executed. Current position is {x=3, y=3, face=SOUTH}``` to make it more readable and user-friendly.                                                                         
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. 
