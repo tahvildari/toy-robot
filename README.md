@@ -130,20 +130,27 @@ To run the test please run this command:
 * [Maven](https://maven.apache.org/) - Dependency Management
 
 ## Design
-The application designed in a way that covers all the business requirement and is flexible for any further changes.
+The application designed in the way that covers all the business requirements and is flexible for any further changes.
 The **Command** design pattern is chosen for creating the toy robot application. 
+
 The command pattern is a behavioural design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time.
+
 For each function of the robot application, there is a Command object that has two main methods to validate and execute the business function.
+
 There is a command processor that receives the submitted command and tries to call the validate() method at the first step.
 If the validation result is fine, then call the execute() method from the received command. 
+
 Each command has its validation and execution logic but if there is any shared and reusable logic between commands, that logic can be
 moved to the AbstractCommand class to reduce any boilerplate codes.
+
 Any cross-cutting functionality like logging, saving tracking of the robot movement,... can be added to the command processor and as a result
 will be applied to all of the received commands.
+
 The table dimensions are kept in the ``Table`` entity class and can be initialised at start-up. Therefore, the application can
 work with different table sizes instead of having hard-coded dimensions.
-Four terms always associated with the command pattern are command, receiver, invoker and client. A command object knows about a receiver and invokes a method of the receiver. Values for parameters of the receiver method are stored in the command. The receiver object to execute these methods is also stored in the command object by aggregation. The receiver then does the work when the execute() method in command is called. An invoker object knows how to execute a command, and optionally does bookkeeping about the command execution. The invoker does not know anything about a concrete command, it knows only about the command interface. Invoker object(s), command objects and receiver objects are held by a client object, the client decides which receiver objects it assigns to the command objects, and which commands it assigns to the invoker. The client decides which commands to execute at which points. To execute a command, it passes the command object to the invoker object.
+
 Each Command encapsulated the validation rules and the functionality and it makes the design more flexible in case of implementation and testing 
+
 There is a position service which is responsible for keeping the robot's position. In addition, it calculates the next movement of the robot based on the received command. 
 This service easily can be modified to keep track of more than one robot in the table which is out of the scope of the current task.
                                                                                
